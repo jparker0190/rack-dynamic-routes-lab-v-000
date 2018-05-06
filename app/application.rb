@@ -8,13 +8,13 @@ class Application
     if req.path.match(/items/)
       item_name = req.path.split("/items/").last
 
-      item = @@items.find{|x| x.name == item_n}
+      item = @@items.find{|x| x.name == item_name}
 
       if ite.nil?
         resp.write "Item not found"
         resp.Status = 400
       else
-        resp.write.ite.price
+        resp.write.item.price
       end
     else
       resp.write "Route not found"
